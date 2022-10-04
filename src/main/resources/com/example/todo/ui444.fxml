@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="6.0" layoutY="125.0" prefHeight="276.0" prefWidth="172.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="182.0" style="-fx-background-color: #16E2F5;" text="Profile">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #CCFFFF;" text="Home">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="179.0" style="-fx-background-color: #16E2F5;" text="Lists">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="182.0" style="-fx-background-color: #16E2F5;" text="Tags">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" style="-fx-background-color: #16E2F5;" text="Calendar">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #16E2F5;" text="Trash">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="197.0" style="-fx-background-color: #16E2F5;" text="Settings">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TextField layoutX="6.0" layoutY="91.0" prefHeight="32.0" prefWidth="172.0" promptText="Search" style="-fx-background-color: #CCFFFF;" />
+      <AnchorPane layoutX="181.0" layoutY="123.0" prefHeight="276.0" prefWidth="415.0" style="-fx-background-color: #CCFFFF;">
+         <children>
+            <TextField layoutX="14.0" layoutY="14.0" prefHeight="15.0" prefWidth="306.0" promptText="Add a Task..........." style="-fx-background-color: #CCFFFF;">
+               <font>
+                  <Font name="Berlin Sans FB" size="17.0" />
+               </font>
+            </TextField>
+            <Label layoutX="23.0" layoutY="48.0" text="REMIND ME">
+               <font>
+                  <Font name="Berlin Sans FB" size="19.0" />
+               </font>
+            </Label>
+            <Button layoutX="95.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="tomorrow">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="23.0" layoutY="76.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="custom">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="121.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="someday">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="27.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="next week">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="27.0" layoutY="145.0" style="-fx-background-color: #CCFFFF;" text="NOTES">
+               <font>
+                  <Font name="Berlin Sans FB" size="19.0" />
+               </font>
+            </Label>
+            <TextField layoutX="18.0" layoutY="166.0" prefHeight="25.0" prefWidth="223.0" promptText="Insert your notes here" style="-fx-background-color: #CCFFFF;" />
+            <AnchorPane layoutX="244.0" layoutY="-1.0" prefHeight="232.0" prefWidth="172.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="13.0" style="-fx-background-color: #CCFFFF;" text="LIST">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="83.0" style="-fx-background-color: #CCFFFF;" text="TIME">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="162.0" style="-fx-background-color: #CCFFFF;" text="TAGS">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="16.0" layoutY="104.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="set time">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="16.0" layoutY="32.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="choose list">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="20.0" layoutY="183.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="#tags">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Button layoutY="231.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="416.0" style="-fx-background-color: #16E2F5;" text="Create task">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="185.0" layoutY="96.0" text="WELCOME!">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="529.0" layoutY="98.0" style="-fx-background-color: #2AF6FF;" text="Shortcuts">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="130.0" fitWidth="164.0" layoutX="6.0" layoutY="-6.0" mouseTransparent="true" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/OnTrackLogo6.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

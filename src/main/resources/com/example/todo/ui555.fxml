@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0FFFF;">
+         <children>
+            <VBox layoutX="6.0" layoutY="125.0" prefHeight="276.0" prefWidth="172.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="182.0" style="-fx-background-color: #CCFFFF;" text="Profile">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #16E2F5;" text="Home">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="179.0" style="-fx-background-color: #16E2F5;" text="Lists">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="182.0" style="-fx-background-color: #16E2F5;" text="Tags">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" style="-fx-background-color: #16E2F5;" text="Calendar">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #16E2F5;" text="Trash">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="197.0" style="-fx-background-color: #16E2F5;" text="Settings">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <TextField layoutX="6.0" layoutY="91.0" prefHeight="32.0" prefWidth="172.0" promptText="Search" style="-fx-background-color: #CCFFFF;" />
+            <AnchorPane layoutX="181.0" layoutY="123.0" prefHeight="276.0" prefWidth="415.0" style="-fx-background-color: #CCFFFF;">
+               <children>
+                  <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="17.0" layoutY="53.0" text="Name :">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="13.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :" wrappingWidth="89.64450073242188">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="30.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail :">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="16.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile no. :">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="19.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="50.0" layoutY="228.0" mnemonicParsing="false" style="-fx-background-color: #16E2F5;" text="Edit Profile">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField layoutX="103.0" layoutY="176.0" promptText="**********" style="-fx-background-color: #F0FFFF;" text="**********">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font></TextField>
+                  <TextField layoutX="103.0" layoutY="51.0" style="-fx-background-color: #F0FFFF;" text="aaaaaa">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font></TextField>
+                  <TextField layoutX="103.0" layoutY="81.0" style="-fx-background-color: #F0FFFF;" text="USER2334">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font></TextField>
+                  <TextField layoutX="103.0" layoutY="112.0" style="-fx-background-color: #F0FFFF;" text="abc@gmail.com">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font></TextField>
+                  <TextField layoutX="103.0" layoutY="145.0" style="-fx-background-color: #F0FFFF;" text="79647928**">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font></TextField>
+                  <Label accessibleRole="BUTTON" layoutX="207.0" layoutY="203.0" text="Forgot Password ?">
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="81.0" fitWidth="85.0" layoutX="280.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Downloads/ava.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="185.0" layoutY="96.0" text="Good afternoon, USER2334!">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="529.0" layoutY="98.0" style="-fx-background-color: #2AF6FF;" text="Shortcuts">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="82.0" fitWidth="183.0" layoutX="1.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@OnTrackLogo6.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
