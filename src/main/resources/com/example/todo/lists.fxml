@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todo.HelloController">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0FFFF;">
          <children>
@@ -25,17 +25,7 @@
                         <Font name="Berlin Sans FB" size="18.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="179.0" style="-fx-background-color: #16E2F5;" text="Lists">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="182.0" style="-fx-background-color: #16E2F5;" text="Tags">
-                     <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" style="-fx-background-color: #16E2F5;" text="Calendar">
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="179.0" style="-fx-background-color: #CCFFFF;" text="Lists">
                      <font>
                         <Font name="Berlin Sans FB" size="18.0" />
                      </font>
@@ -45,7 +35,7 @@
                         <Font name="Berlin Sans FB" size="18.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="197.0" style="-fx-background-color: #CCFFFF;" text="Settings">
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="197.0" style="-fx-background-color: #16E2F5;" text="Settings">
                      <font>
                         <Font name="Berlin Sans FB" size="18.0" />
                      </font>
@@ -55,51 +45,41 @@
             <TextField layoutX="6.0" layoutY="91.0" prefHeight="32.0" prefWidth="172.0" promptText="Search" style="-fx-background-color: #CCFFFF;" />
             <AnchorPane layoutX="181.0" layoutY="123.0" prefHeight="276.0" prefWidth="415.0" style="-fx-background-color: #CCFFFF;">
                <children>
-                  <Label accessibleRole="BUTTON" layoutX="22.0" layoutY="215.0" text="Log out">
+                  <Label layoutX="20.0" layoutY="5.0" text="Lists">
                      <font>
-                        <Font name="Berlin Sans FB" size="22.0" />
+                        <Font name="Berlin Sans FB" size="21.0" />
                      </font>
                   </Label>
-                  <Label accessibleRole="BUTTON" layoutX="20.0" layoutY="97.0" text="Theme and Background">
+                  <Button layoutX="93.0" layoutY="134.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="75.0" style="-fx-background-color: #2AFCFF;" text="Add list">
                      <font>
-                        <Font name="Berlin Sans FB" size="22.0" />
+                        <Font name="Berlin Sans FB" size="12.0" />
                      </font>
-                  </Label>
-                  <Label accessibleRole="BUTTON" layoutX="20.0" layoutY="125.0" text="Suggestions">
+                  </Button>
+                  <Button fx:id="personal" layoutX="17.0" layoutY="39.0" mnemonicParsing="false" onAction="#switchTolistspersonal" style="-fx-background-color: #2AF6FF;" text="Personal">
                      <font>
-                        <Font name="Berlin Sans FB" size="22.0" />
+                        <Font name="Berlin Sans FB" size="13.0" />
                      </font>
-                  </Label>
-                  <Label accessibleRole="BUTTON" layoutX="21.0" layoutY="150.0" text="Permissions">
+                  </Button>
+                  <Button fx:id="grocery" layoutX="19.0" layoutY="73.0" mnemonicParsing="false" onAction="#switchTolistsgrocerys" style="-fx-background-color: #2AF6FF;" text="Grocery">
                      <font>
-                        <Font name="Berlin Sans FB" size="22.0" />
+                        <Font name="Berlin Sans FB" size="13.0" />
                      </font>
-                  </Label>
-                  <Label accessibleRole="BUTTON" layoutX="22.0" layoutY="72.0" text="Stopwatch settings">
+                  </Button>
+                  <Button fx:id="work" layoutX="25.0" layoutY="103.0" mnemonicParsing="false" onAction="#switchTolistswork" style="-fx-background-color: #2AF6FF;" text="Work">
                      <font>
-                        <Font name="Berlin Sans FB" size="22.0" />
+                        <Font name="Berlin Sans FB" size="13.0" />
                      </font>
-                  </Label>
-                  <Label layoutX="22.0" layoutY="14.0" prefHeight="41.0" prefWidth="100.0" text="Settings">
-                     <font>
-                        <Font name="Berlin Sans FB" size="24.0" />
-                     </font>
-                  </Label>
+                  </Button>
                </children>
             </AnchorPane>
-            <Label layoutX="185.0" layoutY="96.0" text="Good afternoon, USER2334!">
+            <Label layoutX="185.0" layoutY="96.0" text="WELCOME!">
                <font>
                   <Font name="Berlin Sans FB" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="529.0" layoutY="98.0" style="-fx-background-color: #2AF6FF;" text="Shortcuts">
-               <font>
-                  <Font name="Berlin Sans FB" size="15.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="82.0" fitWidth="172.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="82.0" fitWidth="179.0" layoutX="3.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../OnTrackLogo6.png" />
+                  <Image url="@../../../images/finallogo.png" />
                </image>
             </ImageView>
          </children>

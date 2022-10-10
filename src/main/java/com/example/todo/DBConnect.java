@@ -11,9 +11,9 @@ public class DBConnect {
         String url = "jdbc:mysql://localhost:3306/" + databaseName;
 
         String username = "root";
-        String password = "@Paw1Paw2";
+        String password = "Ontrack@14";
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(url,username,password);
             System.out.println("Database connected!");
         } catch (Exception e) {
