@@ -12,6 +12,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.Statement;
 
 public class homecontroller extends NullPointerException {
     @FXML
@@ -73,22 +75,51 @@ public class homecontroller extends NullPointerException {
     private TextField description;
 
 
-    public void onCreatetaskButtonClick(ActionEvent event) throws IOException{
+    /*public void onCreatetaskButtonClick(ActionEvent event) throws IOException{
 
         System.out.println("Button clicked!");
-        //if ( !title.getText().isBlank()){
-            //validateSignUp(event);
-
-            if(title.getText().isBlank()){
-                errortitle.setText("⚠ Please enter task!");
-                title.setStyle("-fx-background-color: #CCFFFF; -fx-border-width: 2px");
+        if ( !title.getText().isBlank()) {
+            CreateTask(event);
+        }
+        else{
+                if (title.getText().isBlank()) {
+                    errortitle.setText("⚠ Please enter task!");
+                    title.setStyle("-fx-background-color: #CCFFFF; -fx-border-width: 2px");
+                } else {
+                    errortitle.setText(null);
+                    title.setStyle(null);
+                }
             }
-            else {
-                errortitle.setText(null);
-                title.setStyle(null);
-            }
-
     }
+    private void CreateTask(ActionEvent event) {
+
+        System.out.println("Inside function home");
+        DBConnect connectnow = new DBConnect();
+        Connection connectdb = connectnow.getConnection();
+        Statement statement = null;
+        System.out.println(username);
+        String insertDetails = "INSERT INTO ontrackdb_1.task_details (`title`, `startdate`, `enddate`,'time', `description`,'tags','list') VALUES ('"+title+"', '"+startdate.getText()+"', '"+enddate.getText()+"', '"+description.getText()+"','"+tag.getText()+"','"+list.getText()+"'\n)";
+        try {
+            System.out.println("inside try");
+            statement = connectdb.createStatement();
+            int a = statement.executeUpdate(insertDetails);
+            if (a == 1 ) {
+                System.out.println("Inserted data!");
+            }
+            else{
+                System.out.println("Failed to insert data");
+            }
+            Parent root = FXMLLoader.load(getClass().getResource("home.fxml")); //pass scene name here
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }*/
+
+    //}
 
 
     @FXML

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todo.homecontroller">
+   <children>
+      <VBox layoutX="6.0" layoutY="123.0" prefHeight="276.0" prefWidth="172.0" style="-fx-background-color: #CCFFFF;">
+         <children>
+            <Button fx:id="profile" mnemonicParsing="false" onAction="#switchToprofile" prefHeight="32.0" prefWidth="182.0" style="-fx-background-color: #16E2F5;" text="Profile">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="home" mnemonicParsing="false" onAction="#switchTohome" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #CCFFFF;" text="Home">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="lists" mnemonicParsing="false" onAction="#switchTolists" prefHeight="40.0" prefWidth="179.0" style="-fx-background-color: #16E2F5;" text="Lists">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #16E2F5;" text="Trash">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="197.0" style="-fx-background-color: #16E2F5;" text="Settings">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TextField layoutX="6.0" layoutY="91.0" prefHeight="32.0" prefWidth="172.0" promptText="Search" style="-fx-background-color: #CCFFFF;" />
+      <AnchorPane layoutX="181.0" layoutY="123.0" prefHeight="276.0" prefWidth="415.0" style="-fx-background-color: #CCFFFF;">
+         <children>
+            <TextField fx:id="title" layoutX="7.0" layoutY="14.0" prefHeight="33.0" prefWidth="230.0" promptText="Add a Task..........." style="-fx-background-color: #CCFFFF;">
+               <font>
+                  <Font name="Berlin Sans FB" size="17.0" />
+               </font>
+            </TextField>
+            <Label layoutX="23.0" layoutY="78.0" text="REMIND ME">
+               <font>
+                  <Font name="Berlin Sans FB" size="19.0" />
+               </font>
+            </Label>
+            <Button layoutX="23.0" layoutY="104.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="custom">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="27.0" layoutY="145.0" style="-fx-background-color: #CCFFFF;" text="NOTES">
+               <font>
+                  <Font name="Berlin Sans FB" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="description" layoutX="18.0" layoutY="166.0" prefHeight="25.0" prefWidth="223.0" promptText="Insert your notes here" style="-fx-background-color: #CCFFFF;" />
+            <AnchorPane layoutX="241.0" prefHeight="232.0" prefWidth="172.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="13.0" style="-fx-background-color: #CCFFFF;" text="LIST">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="130.0" style="-fx-background-color: #CCFFFF;" text="#TAGS">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <MenuButton fx:id="list" layoutX="2.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="choose list">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#Personal" text="Personal" />
+                      <MenuItem mnemonicParsing="false" onAction="#Grocery" text="Grocerys" />
+                      <MenuItem mnemonicParsing="false" onAction="#Work" text="Work" />
+                    </items>
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </MenuButton>
+                  <MenuButton fx:id="tag" layoutX="2.0" layoutY="151.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="Select tags">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#Important" text="#Important" />
+                        <MenuItem mnemonicParsing="false" onAction="#Work1" text="#Work" />
+                        <MenuItem mnemonicParsing="false" onAction="#Personal1" text="#Personal" />
+                     </items>
+                     <font>
+                        <Font name="Berlin Sans FB" size="13.0" />
+                     </font>
+                  </MenuButton>
+               </children>
+            </AnchorPane>
+            <Button layoutY="231.0" mnemonicParsing="false" onAction="#onCreatetaskButtonClick" prefHeight="40.0" prefWidth="416.0" style="-fx-background-color: #16E2F5;" text="Create task">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="errortitle" layoutX="23.0" layoutY="47.0" prefHeight="19.0" prefWidth="172.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="185.0" layoutY="96.0" text="WELCOME!">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="80.0" fitWidth="172.0" layoutX="6.0" mouseTransparent="true" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/finallogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
