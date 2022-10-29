@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todo.homecontroller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todo.homesscontroller">
    <children>
       <VBox layoutX="6.0" layoutY="123.0" prefHeight="276.0" prefWidth="172.0" style="-fx-background-color: #CCFFFF;">
          <children>
@@ -55,11 +56,6 @@
                   <Font name="Berlin Sans FB" size="19.0" />
                </font>
             </Label>
-            <Button layoutX="23.0" layoutY="104.0" mnemonicParsing="false" style="-fx-background-color: #2AF6FF;" text="custom">
-               <font>
-                  <Font name="Berlin Sans FB" size="13.0" />
-               </font>
-            </Button>
             <Label layoutX="27.0" layoutY="145.0" style="-fx-background-color: #CCFFFF;" text="NOTES">
                <font>
                   <Font name="Berlin Sans FB" size="19.0" />
@@ -110,6 +106,8 @@
                   <Font size="13.0" />
                </font>
             </Label>
+            <DatePicker fx:id="startdate" layoutX="11.0" layoutY="104.0" prefHeight="25.0" prefWidth="98.0" promptText="Start date" />
+            <DatePicker fx:id="enddate" layoutX="121.0" layoutY="103.0" prefHeight="25.0" prefWidth="98.0" promptText="End date" />
          </children>
       </AnchorPane>
       <Label layoutX="185.0" layoutY="96.0" text="WELCOME!">
