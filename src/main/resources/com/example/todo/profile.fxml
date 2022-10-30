@@ -35,22 +35,22 @@
                   <Font name="Berlin Sans FB" size="21.0" />
                </font>
             </Label>
-            <Text layoutX="67.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :" wrappingWidth="109.64450073242188">
+            <Text layoutX="76.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :" wrappingWidth="109.64450073242188">
                <font>
                   <Font name="Berlin Sans FB" size="21.0" />
                </font>
             </Text>
-            <Text layoutX="73.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail :">
+            <Text layoutX="88.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail :">
                <font>
                   <Font name="Berlin Sans FB" size="21.0" />
                </font>
             </Text>
-            <Text layoutX="72.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile no. :">
+            <Text layoutX="81.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile no. :">
                <font>
                   <Font name="Berlin Sans FB" size="21.0" />
                </font>
             </Text>
-            <Text layoutX="76.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :">
+            <Text layoutX="81.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :">
                <font>
                   <Font name="Berlin Sans FB" size="21.0" />
                </font>
@@ -60,27 +60,27 @@
                   <Font name="Berlin Sans FB" size="15.0" />
                </font>
             </Button>
-            <TextField layoutX="248.0" layoutY="250.0" promptText="**********" style="-fx-background-color: #F0FFFF;">
+            <TextField layoutX="240.0" layoutY="250.0" prefHeight="32.0" prefWidth="216.0" promptText="**********" style="-fx-background-color: #F0FFFF;">
                <font>
                   <Font name="Berlin Sans FB" size="17.0" />
                </font>
             </TextField>
-            <TextField layoutX="238.0" layoutY="76.0" style="-fx-background-color: #F0FFFF;">
+            <TextField layoutX="238.0" layoutY="76.0" prefHeight="32.0" prefWidth="216.0" style="-fx-background-color: #F0FFFF;">
                <font>
                   <Font name="Berlin Sans FB" size="17.0" />
                </font>
             </TextField>
-            <TextField layoutX="238.0" layoutY="119.0" style="-fx-background-color: #F0FFFF;">
+            <TextField layoutX="238.0" layoutY="119.0" prefHeight="32.0" prefWidth="216.0" style="-fx-background-color: #F0FFFF;">
                <font>
                   <Font name="Berlin Sans FB" size="17.0" />
                </font>
             </TextField>
-            <TextField layoutX="238.0" layoutY="162.0" promptText="eg. abc@gmail.com" style="-fx-background-color: #F0FFFF;">
+            <TextField layoutX="238.0" layoutY="162.0" prefHeight="32.0" prefWidth="216.0" promptText="eg. abc@gmail.com" style="-fx-background-color: #F0FFFF;">
                <font>
                   <Font name="Berlin Sans FB" size="17.0" />
                </font>
             </TextField>
-            <TextField layoutX="248.0" layoutY="211.0" style="-fx-background-color: #F0FFFF;">
+            <TextField layoutX="239.0" layoutY="211.0" prefHeight="32.0" prefWidth="216.0" style="-fx-background-color: #F0FFFF;">
                <font>
                   <Font name="Berlin Sans FB" size="17.0" />
                </font>

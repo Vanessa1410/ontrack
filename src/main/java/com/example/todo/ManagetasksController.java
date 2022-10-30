@@ -90,12 +90,14 @@ public class ManagetasksController {
             System.out.println("search query works");
 
             while (resultSet.next()) {
+
                 this.title.setText(resultSet.getString("title"));
                 this.startdate.setText(resultSet.getString("startdate"));
                 this.enddate.setText(resultSet.getString("enddate"));
                 this.list.setText(resultSet.getString("list"));
                 this.tag.setText(resultSet.getString("tag"));
                 this.description.setText(resultSet.getString("description"));
+                System.out.println("search works?");
             }
         } catch (Exception var7) {
             var7.printStackTrace();
@@ -106,11 +108,38 @@ public class ManagetasksController {
     private void EditTaskDetails() {
         DBConnect connectnow = new DBConnect();
         Connection connectdb = connectnow.getConnection();
-        String var10000 = this.title.getText();
-        String query = "Update task_details set title = ' " + var10000 + " ' , startdate = ' " + this.startdate.getText() + " ', enddate = ' " + this.enddate.getText() + " ', list = ' " + this.list.getText() + " ', description = " + this.description.getText() + " where title = " + this.title.getText();
+        String var10000 = this.searchtitle.getText();
+        String query = "UPDATE task_details SET title ='"+var10000+"' , startdate ='"+this.startdate.getText()+"', enddate ='"+this.enddate.getText()+"', list ='"+this.list.getText()+"', description ='"+this.description.getText()+"' WHERE title ='"+this.searchtitle.getText()+"'";
+        System.out.println(query);
         this.executeQuery(query);
         System.out.println("edit query works");
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        this.title.setText("");
+        this.startdate.setText("");
+        this.enddate.setText("");
+        this.list.setText("");
+        this.tag.setText("");
+        this.description.setText("");
+        //this.statuslabel.setText("");
+        this.searchtitle.setText("");
         this.statuslabel.setText("Updated Successfully");
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        this.statuslabel.setText("");
+
+
+
+
     }
 
     private void executeQuery(String query) {
@@ -129,9 +158,28 @@ public class ManagetasksController {
     private void DeleteTaskDetails() {
         DBConnect connectnow = new DBConnect();
         Connection connectdb = connectnow.getConnection();
-        String query = "Delete from ontrackdb_1.task_details where title = " + this.title.getText() + " ";
+       // String query = "Delete from task_details where title ='"+this.searchtitle.getText()+"'";
+        String query = "UPDATE task_details SET isDeleted = '1' WHERE title ='"+this.searchtitle.getText()+"'";
+        System.out.println(query);
         this.executeQuery(query);
         this.statuslabel.setText("Deleted Successfully");
+
+        this.title.setText("");
+        this.startdate.setText("");
+        this.enddate.setText("");
+        this.list.setText("");
+        this.tag.setText("");
+        this.description.setText("");
+        //this.statuslabel.setText("");
+        this.searchtitle.setText("");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        this.statuslabel.setText("");
+
+
     }
 
     @FXML
