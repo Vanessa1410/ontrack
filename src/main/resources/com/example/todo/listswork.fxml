@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="989.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todo.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="989.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todo.ListsWorkController">
    <children>
       <AnchorPane layoutX="228.0" layoutY="155.0" prefHeight="380.0" prefWidth="760.0" style="-fx-background-color: #CCFFFF;">
          <children>
@@ -31,7 +31,7 @@
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="work" layoutX="241.0" layoutY="39.0" mnemonicParsing="false" onAction="#switchTolistswork" style="-fx-background-color: #2AF6FF;" text="Work">
+            <Button fx:id="work" layoutX="241.0" layoutY="39.0" mnemonicParsing="false" onAction="#OnWorkClick" style="-fx-background-color: #2AF6FF;" text="Work">
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
@@ -50,7 +50,7 @@
                   </TableView>
                </content>
             </ScrollPane>
-            <Button layoutX="326.0" layoutY="340.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="28.0" prefWidth="167.0" style="-fx-background-color: #2AF6FF;" text="Delete">
+            <Button layoutX="326.0" layoutY="340.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="167.0" style="-fx-background-color: #2AF6FF;" text="Delete">
                <font>
                   <Font name="Berlin Sans FB" size="15.0" />
                </font>
@@ -80,7 +80,12 @@
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #16E2F5;" text="Trash">
+            <Button fx:id="managetasks" mnemonicParsing="false" onAction="#switchTomanagetasks" prefHeight="40.0" prefWidth="223.0" style="-fx-background-color: #16E2F5;" text="Manage Tasks">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="trash" mnemonicParsing="false" onAction="#switchTotrash" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #16E2F5;" text="Trash">
                <font>
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>

@@ -23,7 +23,7 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 
 
-public class ListsController implements Initializable {
+public class ListsPersonalController implements Initializable {
         @FXML
         private TableView<TaskDetailsinfo> table;
         @FXML
@@ -40,7 +40,7 @@ public class ListsController implements Initializable {
         private TableColumn<TaskDetailsinfo, String> tag;
         final ObservableList<TaskDetailsinfo> listview = FXCollections.observableArrayList();
 
-        public ListsController() {
+        public ListsPersonalController() {
         }
 
         public void initialize(URL url, ResourceBundle rb) {
@@ -87,6 +87,9 @@ public class ListsController implements Initializable {
 
         @FXML
         private Button lists;
+
+        @FXML
+        private Button trash;
 
 
 
@@ -143,5 +146,21 @@ public class ListsController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }
+    @FXML
+    public void switchTotrash(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("trash.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
     }
+    @FXML
+    public void switchTomanagetasks(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("managetasks.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+    }
+}
 

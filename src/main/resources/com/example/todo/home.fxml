@@ -31,7 +31,12 @@
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #16E2F5;" text="Trash">
+            <Button fx:id="managetasks" mnemonicParsing="false" onAction="#switchTomanagetasks" prefHeight="40.0" prefWidth="223.0" style="-fx-background-color: #16E2F5;" text="Manage Tasks">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="trash" mnemonicParsing="false" onAction="#switchTotrash" prefHeight="40.0" prefWidth="225.0" style="-fx-background-color: #16E2F5;" text="Trash">
                <font>
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>

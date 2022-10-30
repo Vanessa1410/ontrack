@@ -22,7 +22,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class ListsGroceryController implements Initializable {
+public class ListsWorkController implements Initializable {
     @FXML
     private TableView<TaskDetailsinfo> table;
     @FXML
@@ -39,19 +39,10 @@ public class ListsGroceryController implements Initializable {
     private TableColumn<TaskDetailsinfo, String> tag;
     final ObservableList<TaskDetailsinfo> listview = FXCollections.observableArrayList();
 
-    public ListsGroceryController() {
+    public ListsWorkController() {
     }
 
     public void initialize(URL url, ResourceBundle rb) {
-
-
-        /*show just one selected row
-        ObservableList<> productslist;
-        productslist=tableview.getSelectionModel().getSelectedItems();
-        System.out.println(productslist.get(0).getProductPrice());
-        */
-
-
         this.title.setCellValueFactory(new PropertyValueFactory("title"));
         this.startdate.setCellValueFactory(new PropertyValueFactory("startdate"));
         this.enddate.setCellValueFactory(new PropertyValueFactory("enddate"));
@@ -62,7 +53,7 @@ public class ListsGroceryController implements Initializable {
         try {
             DBConnect connectnow = new DBConnect();
             Connection connectdb = connectnow.getConnection();
-            String sql = "SELECT * FROM ontrackdb_1.task_details where list='Grocery' and isDeleted =0";
+            String sql = "SELECT * FROM ontrackdb_1.task_details where list='Work' and isDeleted =0";
             Statement s = connectdb.createStatement();
             ResultSet resultSet = s.executeQuery(sql);
             System.out.println("query working");
@@ -75,17 +66,7 @@ public class ListsGroceryController implements Initializable {
             var8.printStackTrace();
         }
 
-
     }
-
-    /*public void onDeleteClick(ActionEvent event){
-        Object selectedItems = table.getSelectionModel().getSelectedItem();
-        String first_Column = selectedItems.toString().split(",")[0].substring(1);
-        System.out.println(selectedItems);
-        int task_id = table.getSelectionModel().getSelectedIndex();
-        table.getItems().remove(task_id);
-    }*/
-
     @FXML
     public void switchTolists(ActionEvent event) throws IOException {
 
@@ -97,9 +78,9 @@ public class ListsGroceryController implements Initializable {
 
 
     @FXML
-    public void OnGroceryClick(ActionEvent event) throws IOException {
+    public void OnWorkClick(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("listsgrocerys.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("listswork.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -113,23 +94,23 @@ public class ListsGroceryController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }
-   /* @FXML
-    public void switchTolistsgrocerys(ActionEvent event) throws IOException {
+     @FXML
+     public void switchTolistsgrocerys(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("listsgrocerys.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-    }
-*/
-    @FXML
+         Parent root = FXMLLoader.load(getClass().getResource("listsgrocerys.fxml"));
+         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+         Scene scene = new Scene(root);
+         stage.setScene(scene);
+     }
+
+    /*@FXML
     public void switchTolistswork(ActionEvent event) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("listswork.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
-    }
+    }*/
     @FXML
     public  void switchTohome(ActionEvent event) throws IOException {
 
@@ -146,6 +127,7 @@ public class ListsGroceryController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }
+
     @FXML
     private Button trash;
     @FXML
