@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todo.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="989.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todo.HelloController">
    <children>
-      <Button fx:id="login" layoutX="360.0" layoutY="122.0" mnemonicParsing="false" onAction="#switchTologin" prefHeight="39.0" prefWidth="114.0" style="-fx-background-color: #6CD0EF;" text="Login">
+      <Button fx:id="login" layoutX="585.0" layoutY="200.0" mnemonicParsing="false" onAction="#switchTologin" prefHeight="39.0" prefWidth="114.0" style="-fx-background-color: #6CD0EF;" text="Login">
          <font>
             <Font name="Bell MT Bold" size="18.0" />
          </font>
@@ -17,7 +17,7 @@
             <ColorAdjust brightness="-0.08" contrast="0.05" saturation="0.08" />
          </effect>
       </Button>
-      <Button layoutX="360.0" layoutY="200.0" mnemonicParsing="false" onAction="#switchTosignup" prefHeight="39.0" prefWidth="114.0" style="-fx-background-color: #6CD0EF;" text="Signup">
+      <Button layoutX="585.0" layoutY="285.0" mnemonicParsing="false" onAction="#switchTosignup" prefHeight="39.0" prefWidth="114.0" style="-fx-background-color: #6CD0EF;" text="Signup">
          <font>
             <Font name="Bell MT Bold" size="18.0" />
          </font>
@@ -25,7 +25,7 @@
             <ColorAdjust brightness="-0.08" contrast="0.05" saturation="0.08" />
          </effect>
       </Button>
-      <ImageView fitHeight="137.0" fitWidth="289.0" layoutX="49.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="149.0" fitWidth="387.0" layoutX="187.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/finallogo.png" />
          </image>

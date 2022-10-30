@@ -7,10 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -65,6 +62,8 @@ public class homesscontroller extends NullPointerException {
         tagChoice3 = "Work";
     }
 
+    @FXML
+    private Label taskadded;
 
     @FXML
     private TextField title;
@@ -91,6 +90,7 @@ public class homesscontroller extends NullPointerException {
         String tag = this.tag.getText();
         String description = this.description.getText();
 
+        System.out.println("inside create task button");
 
         DBConnect connectnow = new DBConnect();
         Connection connectdb = connectnow.getConnection();
@@ -122,7 +122,9 @@ public class homesscontroller extends NullPointerException {
                     alert.setContentText("BookID Already Exists");
                     alert.show();
                 } else {*/
-                PreparedStatement psinsert = connectdb.prepareStatement("INSERT INTO ontrackdb_1.task_details VALUES (?,?,?,?,?,?)");
+
+                System.out.println("before insert");
+                PreparedStatement psinsert = connectdb.prepareStatement("INSERT INTO ontrackdb_1.task_details(title,startdate,enddate,list,tag,description) VALUES (?,?,?,?,?,?)");
                 psinsert.setString(1, title);
                 psinsert.setDate(2, Date.valueOf(startdateValue));
                 psinsert.setDate(3, Date.valueOf(enddateValue));
@@ -130,6 +132,8 @@ public class homesscontroller extends NullPointerException {
                 psinsert.setString(5, tag);
                 psinsert.setString(6, description);
                 psinsert.executeUpdate();
+                taskadded.setText("Task Added Successfully!");
+                System.out.println("after insert");
                     /*this.AddBookLabel.setText("Book Added Successfully!");
                     this.title.clear();
                     this.startdate.clear();

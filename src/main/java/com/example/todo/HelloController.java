@@ -7,8 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -48,6 +46,9 @@ public class HelloController {
 
     @FXML
     private Button lists;
+
+
+
 
     @FXML
     public  void switchTologin(ActionEvent event) throws IOException {
