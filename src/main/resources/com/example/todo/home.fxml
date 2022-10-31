@@ -41,14 +41,13 @@
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="223.0" style="-fx-background-color: #16E2F5;" text="Settings">
+            <Button fx:id="logout" mnemonicParsing="false" onAction="#switchTologout" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #16E2F5;" text="Log out">
                <font>
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>
             </Button>
          </children>
       </VBox>
-      <TextField layoutX="-1.0" layoutY="131.0" prefHeight="33.0" prefWidth="230.0" promptText="Search" style="-fx-background-color: #CCFFFF;" />
       <AnchorPane layoutX="229.0" layoutY="168.0" prefHeight="371.0" prefWidth="757.0" style="-fx-background-color: #CCFFFF;">
          <children>
             <TextField fx:id="title" layoutX="7.0" layoutY="14.0" prefHeight="33.0" prefWidth="477.0" promptText="Add a Task..........." style="-fx-background-color: #CCFFFF;">
@@ -125,7 +124,7 @@
       </AnchorPane>
       <Label layoutX="240.0" layoutY="137.0" text="WELCOME!">
          <font>
-            <Font name="Berlin Sans FB" size="26.0" />
+            <Font name="Berlin Sans FB" size="23.0" />
          </font>
       </Label>
       <ImageView fitHeight="96.0" fitWidth="223.0" layoutX="6.0" layoutY="14.0" mouseTransparent="true" pickOnBounds="true">

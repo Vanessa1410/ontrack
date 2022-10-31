@@ -25,7 +25,7 @@ import static com.example.todo.HelloController.setUsername;
         @FXML
         private PasswordField password;
         @FXML
-        private TextField username;
+        private  TextField username;
 
 
 
@@ -40,6 +40,7 @@ import static com.example.todo.HelloController.setUsername;
         private Stage stage;
         private Scene scene;
 
+        //public static String userID = username.getText();
 
 
         public void onLoginButtonClick(ActionEvent event) throws IOException {

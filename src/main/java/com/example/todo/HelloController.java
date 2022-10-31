@@ -66,6 +66,7 @@ public class HelloController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }
+
     @FXML
     public  void switchTohome(ActionEvent event) throws IOException {
 
@@ -142,6 +143,14 @@ public class HelloController {
     public void switchTomanagetasks(ActionEvent event) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("managetasks.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+    }
+    @FXML
+    public  void switchTologout(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("logout.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

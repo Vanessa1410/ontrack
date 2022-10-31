@@ -14,7 +14,7 @@
    <children>
       <Label layoutX="241.0" layoutY="127.0" text="WELCOME!">
          <font>
-            <Font name="Berlin Sans FB" size="20.0" />
+            <Font name="Berlin Sans FB" size="23.0" />
          </font>
       </Label>
       <ImageView fitHeight="96.0" fitWidth="227.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -22,7 +22,6 @@
             <Image url="@../../../images/finallogo.png" />
          </image>
       </ImageView>
-      <TextField layoutX="2.0" layoutY="122.0" prefHeight="32.0" prefWidth="227.0" promptText="Search" style="-fx-background-color: #CCFFFF;" />
       <AnchorPane layoutX="234.0" layoutY="154.0" prefHeight="385.0" prefWidth="751.0" style="-fx-background-color: #CCFFFF;">
          <children>
             <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
@@ -89,7 +88,7 @@
       </AnchorPane>
       <VBox layoutX="3.0" layoutY="154.0" prefHeight="385.0" prefWidth="227.0" style="-fx-background-color: #CCFFFF;">
          <children>
-            <Button fx:id="profile" mnemonicParsing="false" onAction="#switchToprofile" prefHeight="40.0" prefWidth="232.0" style="-fx-background-color: #16E2F5;" text="Profile">
+            <Button fx:id="profile" mnemonicParsing="false" onAction="#switchToprofile" prefHeight="40.0" prefWidth="232.0" style="-fx-background-color: #CCFFFF;" text="Profile">
                <font>
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>
@@ -109,12 +108,12 @@
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>
             </Button>
-            <Button fx:id="trash" mnemonicParsing="false" onAction="#switchTotrash" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #CCFFFF;" text="Trash">
+            <Button fx:id="trash" mnemonicParsing="false" onAction="#switchTotrash" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #16E2F5;" text="Trash">
                <font>
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #16E2F5;" text="Settings">
+            <Button fx:id="logout" mnemonicParsing="false" onAction="#switchTologout" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #16E2F5;" text="Log out">
                <font>
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>

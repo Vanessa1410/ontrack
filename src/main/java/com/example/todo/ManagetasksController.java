@@ -81,13 +81,19 @@ public class ManagetasksController {
     private void search(ActionEvent event) {
         DBConnect connection = new DBConnect();
         Connection connectDB = connection.getConnection();
-        String getename = "SELECT * FROM task_details where title='" + this.searchtitle.getText() +"'";
+        String getename = "SELECT * FROM task_details where isDeleted=0 and title='" + this.searchtitle.getText() +"'";
         System.out.println(getename);
+        this.statuslabel.setText("");
 
         try {
             Statement statement = connectDB.createStatement();
             ResultSet resultSet = statement.executeQuery(getename);
             System.out.println("search query works");
+            //System.out.println(resultSet.getString("title"));
+//            if(resultSet == null){
+//                System.out.println("is empty");
+//                this.statuslabel.setText("No results found");
+//            }
 
             while (resultSet.next()) {
 
@@ -113,12 +119,13 @@ public class ManagetasksController {
         System.out.println(query);
         this.executeQuery(query);
         System.out.println("edit query works");
+        this.statuslabel.setText("Updated Successfully");
 
-        try {
+        /*try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         this.title.setText("");
         this.startdate.setText("");
@@ -128,14 +135,19 @@ public class ManagetasksController {
         this.description.setText("");
         //this.statuslabel.setText("");
         this.searchtitle.setText("");
-        this.statuslabel.setText("Updated Successfully");
+        //String successmsg = "Updated Successfully";
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        this.statuslabel.setText("");
+
+//        System.out.println("1");
+//        try {
+//            Thread.sleep(6000);
+//            this.statuslabel.setText("");
+//
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println("2");
+        //this.statuslabel.setText("");
 
 
 
@@ -172,12 +184,12 @@ public class ManagetasksController {
         this.description.setText("");
         //this.statuslabel.setText("");
         this.searchtitle.setText("");
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        this.statuslabel.setText("");
+//        try {
+//            Thread.sleep(3000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        this.statuslabel.setText("");
 
 
     }
@@ -246,6 +258,14 @@ public class ManagetasksController {
     public void switchTomanagetasks(ActionEvent event) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("managetasks.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+    }
+    @FXML
+    public void switchTologout(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("logout.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

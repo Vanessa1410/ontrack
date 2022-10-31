@@ -5,7 +5,6 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -57,7 +56,6 @@
             <Image url="@../../../images/finallogo.png" />
          </image>
       </ImageView>
-      <TextField layoutX="3.0" layoutY="123.0" prefHeight="32.0" prefWidth="218.0" promptText="Search" style="-fx-background-color: #CCFFFF;" />
       <VBox layoutY="157.0" prefHeight="380.0" prefWidth="223.0" style="-fx-background-color: #CCFFFF;">
          <children>
             <Button fx:id="profile" mnemonicParsing="false" onAction="#switchToprofile" prefHeight="33.0" prefWidth="225.0" style="-fx-background-color: #16E2F5;" text="Profile">
@@ -85,7 +83,7 @@
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="223.0" style="-fx-background-color: #16E2F5;" text="Settings">
+            <Button fx:id="logout" mnemonicParsing="false" onAction="#switchTologout" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #16E2F5;" text="Log out">
                <font>
                   <Font name="Berlin Sans FB" size="22.0" />
                </font>
@@ -94,7 +92,7 @@
       </VBox>
       <Label layoutX="228.0" layoutY="124.0" text="WELCOME!">
          <font>
-            <Font name="Berlin Sans FB" size="26.0" />
+            <Font name="Berlin Sans FB" size="23.0" />
          </font>
       </Label>
    </children>
